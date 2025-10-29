@@ -2,6 +2,14 @@
 
 ## Status: ✅ Semua Tombol Valid dan Berfungsi
 
+### ⚠️ Masalah yang Ditemukan & Diperbaiki
+
+**Masalah Awal**: Tombol navigasi tidak berfungsi karena menggunakan pattern yang salah.
+- ❌ Pattern Lama: `<Link><Button>Text</Button></Link>` - Tidak berfungsi
+- ✅ Pattern Baru: `<Button asChild><Link>Text</Link></Button>` - Berfungsi dengan baik
+
+**Solusi**: Menggunakan prop `asChild` pada Button component yang mendukung Radix UI Slot, memungkinkan Link component mengambil alih rendering Button.
+
 ### Tombol yang Diperbaiki
 
 #### 1. **Shop Devices** (Hero Section - Home Page)
