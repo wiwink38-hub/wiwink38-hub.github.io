@@ -39,9 +39,11 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button variant="hero" size="sm">
-              Get Started
-            </Button>
+            <Link to="/plans">
+              <Button variant="hero" size="sm" data-testid="button-get-started-navbar">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,9 +73,11 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button variant="hero" size="sm" className="w-full">
-                Get Started
-              </Button>
+              <Link to="/plans" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="hero" size="sm" className="w-full" data-testid="button-get-started-mobile">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         )}

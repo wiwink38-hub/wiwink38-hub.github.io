@@ -70,12 +70,16 @@ const Home = () => {
               Discover unlimited possibilities with our cutting-edge devices and blazing-fast 5G network
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-              <Button variant="hero" size="lg">
-                Shop Devices <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg">
-                View Plans
-              </Button>
+              <Link to="/products">
+                <Button variant="hero" size="lg" data-testid="button-shop-devices">
+                  Shop Devices <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/plans">
+                <Button variant="outline" size="lg" data-testid="button-view-plans">
+                  View Plans
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -136,9 +140,11 @@ const Home = () => {
                 <div className="p-6">
                   <h3 className="mb-2 text-xl font-semibold">{product.name}</h3>
                   <p className="mb-4 text-2xl font-bold text-primary">{product.price}</p>
-                  <Button variant="hero" className="w-full">
-                    Learn More
-                  </Button>
+                  <Link to="/products" className="block">
+                    <Button variant="hero" className="w-full" data-testid={`button-learn-more-${index}`}>
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
               </Card>
             ))}
@@ -157,9 +163,11 @@ const Home = () => {
               <p className="mb-8 text-muted-foreground">
                 Join millions of satisfied customers enjoying the best network experience
               </p>
-              <Button variant="hero" size="lg">
-                Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link to="/plans">
+                <Button variant="hero" size="lg" data-testid="button-get-started-today">
+                  Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </Card>
         </div>
