@@ -39,11 +39,11 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link to="/plans">
-              <Button variant="hero" size="sm" data-testid="button-get-started-navbar">
+            <Button variant="hero" size="sm" asChild data-testid="button-get-started-navbar">
+              <Link to="/plans">
                 Get Started
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,11 +73,11 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link to="/plans" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="hero" size="sm" className="w-full" data-testid="button-get-started-mobile">
+              <Button variant="hero" size="sm" className="w-full" asChild data-testid="button-get-started-mobile">
+                <Link to="/plans" onClick={() => setMobileMenuOpen(false)}>
                   Get Started
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         )}
